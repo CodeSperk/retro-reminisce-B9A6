@@ -1,0 +1,114 @@
+  :root{
+    /* fonts */
+    --font-inter: "Inter", sans-serif;
+    --font-mulish: "Mulish", sans-serif;
+
+    /* colors */
+    --clr-primary: #12132d99;
+    --clr-title: #12132D;
+    --clr-focused: #797DFC;
+
+    --bg-primary:#F3F3F5;
+    --bg-hovered: #797dfc1a;
+    --icon-bg: #12132d08;
+    --t:#12132dcc;
+  }
+
+  /* global styles */
+  .font-inter{
+    font-family:  var(--font-inter);
+  }
+  body{
+    font-size: 14px;
+    font-family: var(--font-mulish);
+    color: var(--clr-primary);
+  }
+  /* button */
+  .btn{
+    background-color: var(--clr-focused);
+    padding:8px 18px;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 36px;
+    border: 1px solid var(--clr-focused);
+    transition: background-color 0.3s;
+  }
+  .btn:hover{
+    background-color: var(--bg-hovered);
+    color:var(--clr-title);
+    border: 1px solid var(--clr-focused);
+  }
+  .sec-header{
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto 48px;
+    font-size: 1.1rem;
+  }
+  
+  .header-2{
+    font-size: 1.9rem;
+    color:var(--clr-title);
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+  .header-3{
+    font-size: 1.6rem;
+    color: var(--clr-title);
+    font-weight: 900;
+  }
+
+  /* nav icons */
+  .menu-icon{
+    background-color: var(--icon-bg);
+    padding: 8px;
+    border-radius:50%;
+    border: 1px solid var(--bg-primary);
+    cursor: pointer;
+    width:40px;
+  }
+  .menu-icon:hover{
+    background-color: var(--bg-primary);
+    border: 1px solid var(--clr-focused);
+  }
+
+ @media screen and (min-width: 768px) {
+    body{
+      font-size: 16px;
+    }   
+    .btn{
+      padding:12px 32px;
+      font-size: 18px;
+      font-weight: 700;
+
+    }
+    .sec-header{
+      max-width: 60%;
+    }
+    .header-2{
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+    .header-3{
+      font-size: 2rem;
+    }
+    .menu-icon{
+      padding: 10px;
+      width:48px;
+    }
+  }
+
+  .sidebar{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+  }
+
+
+      
+      
+    
+
+     
+      
+ 

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Reminisce</title>
+
+  <!-- tailwind  css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/1b66411b6a.js" crossorigin="anonymous"></script>
+
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body class="font-mulish relative">       
+  <header class="max-w-7xl px-4 md:px-10 lg:px-14 mx-auto">
+    <!-- Navbar 
+    ------------------- -->
+    <nav class="py-8 md:py-12 flex items-center justify-between">
+      <div class="flex items-center">
+        <div>
+          <button id="sidebar-btn">
+            <i
+            class="fa-solid fa-bars mr-4 text-2xl md:text-3xl lg:hidden text-[#12132D] cursor-pointer hover:text-[#6469c8]"></i> 
+          </button> 
+
+          <!-- sidebar -->
+          <div class="sidebar z-50 w-2/3 md:w-1/2 lg:w-1/3 h-[100vh] bg-[#F3F3F5]  text-white p-8 md:py-12 fixed top-0 left-0 transition-all duration-300 ease-linear transform -translate-x-full">
+            
+            <!-- Sidebar Content -->
+            <div class="flex justify-between items-center">
+              <h3 class="header-3 text-[#12132D] text-2xl">ReTro</h3>
+              <i id="close-btn" class="fa-solid fa-circle-xmark text-3xl text-[#12132D] hover:text-red-500 cursor-pointer"></i>
+            </div>
+           
+            <ul class="space-y-4 my-10">
+              <div class="flex flex-col items-center justify-center gap-6">
+                <li>
+                  <img src="./images-&-icons/home-icon.svg" alt="home-icon" class="bg-white hover:bg-slate-300 rounded-full p-2 w-10 mx-auto cursor-pointer" title="Home">
+                </li>
+                <li>
+                  <img src="./images-&-icons/pen-icon.svg" alt="home-icon" class="bg-white hover:bg-slate-300 rounded-full p-2 w-10 mx-auto cursor-pointer" title="Edit">
+                </li>
+                <li>
+                  <img src="./images-&-icons/person-icon.svg" alt="home-icon" class="bg-white hover:bg-slate-300 rounded-full p-2 w-10 mx-auto cursor-pointer" title="add">
+                </li>
+                <li>
+                  <img src="./images-&-icons/flag-icon.svg" alt="home-icon" class="bg-white hover:bg-slate-300 rounded-full p-2 w-10 mx-auto cursor-pointer" title="Flag">
+                </li>
+              </div>
+             
+            </ul>
+
+            <div class="flex gap-6 justify-center text-[#12132D] mb-12">
+              <i class="fa-brands fa-twitter text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+              <i class="fa-brands fa-facebook-f text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+              <i class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+              <i class="fa-brands fa-github text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="header-3">ReTro</h3>
+      </div>
+
+      <div class="flex items-center gap-3 md:gap-6">
+        <div id="lg-menu" class="hidden menu-icons lg:flex items-center gap-2 md:gap-2">
+          <img src="./images-&-icons/home-icon.svg" alt="home-icon" class="menu-icon" title="Home">
+          <img src="./images-&-icons/pen-icon.svg" alt="pen-icon" class="menu-icon" title="Edit">
+          <img src="./images-&-icons/person-icon.svg" alt="person-icon" class="menu-icon" title="New Member">
+          <img src="./images-&-icons/flag-icon.svg" alt="" class="menu-icon" title="Flag">
+        </div>
+        <button class="btn">Sign In</button>
+      </div>
+    </nav>
+
+    <!-- banner section
+    ----------------------- -->
+    <section
+      class="banner bg-[#12132D]  rounded-2xl md:rounded-3xl relative min-h-[550px] flex justify-center items-center">
+      <div class="p-6 py-12 md:p-12 lg:p-20 flex flex-col lg:flex-row gap-12 justify-between items-start z-20">
+        <!-- part-1 -->
+        <div class="text-white lg:w-3/5">
+          <h1 class="text-[2.3rem] md:text-[3rem] font-extrabold">Welcome to the <span
+              class="text-[#797DFC]">ReTro</span> Forum</h1>
+          <p class="opacity-80 text-[1.1rem] font-medium pt-5 pb-8">Share your favorite opinion and win and wp
+            forum coffee mug!</p>
+          <div class="relative md:w-4/5 lg:w-[90%] xl:w-4/5 mt-5">
+            <input id="search-input" type="text"
+              class="py-3 md:py-4 px-6 rounded-full w-full outline-none text-[#12132D] text-base md:text-xl border-2 border-white hover:border-[#797DFC]"
+              placeholder="Search here anything">
+            <button id="search-btn"
+              class="btn absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 py-2.5">Search</button>
+          </div>
+        </div>
+
+        <!-- part-2 -->
+        <div
+          class="p-6 md:p-8 rounded-2xl bg-white w-full lg:w-2/5 mt-6 text-base md:text-xl font-medium text-[#12132Dcc]">
+          <div class="flex gap-6 justify-between">
+            <p>Registered Users</p>
+            <p>01</p>
+          </div>
+          <div class="flex gap-6 justify-between">
+            <p>Forum</p>
+            <p>05</p>
+          </div>
+          <div class="flex gap-6 justify-between">
+            <p>Topics</p>
+            <p>01</p>
+          </div>
+          <div class="flex gap-6 justify-between">
+            <p>Replies</p>
+            <p>01</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- background image -->
+      <img src="./images-&-icons/bgbanner.png" alt="banner background image" class="absolute bottom-0 z-0 w-full">
+    </section>
+  
+
+  </header>
+
+  <!-- Main section
+  ==================== -->
+  <main class="max-w-7xl px-4 md:px-10 lg:px-14 mx-auto">
+    <!-- lets Discuss Section -->
+    <section class="mt-16 md:mt-24">
+      <header class="sec-header">
+        <h2 class="header-2">Let’s Discuss</h2>
+        <p class="font-inter">Engage in dynamic conversations, share ideas, and explore various viewpoints on trending
+          subjects and
+          community interests collaboratively.</p>
+      </header>
+
+      <!-- Loading Spinner -->
+      <div id="post-loader" class="flex justify-center items-center min-h-[30vh]">
+        <img src="./images-&-icons/loading-gif.gif" alt="loading-image" class="h-[100px]">
+      </div>
+
+      <!-- Section contents -->
+      <div class="mt-12 flex items-start flex-col-reverse gap-6 lg:flex-row">
+        <!-- articles container -->
+        <div id="posts-container" class="article-container space-y-6 lg:w-2/3">
+
+        </div>
+
+        <!-- Marked Lists part -->
+        <div id="marked-lists-part" class="bg-[#12132d0d] rounded-xl md:rounded-2xl p-4 md:p-6 w-full lg:w-1/3 hidden">
+          <div class="flex justify-between items-center">
+            <h5 class="text-[1.2rem] font-bold text-[#12132D]">Title</h5>
+
+            <div class="flex items-center gap-2">
+              <img src="./images-&-icons/right-mark.svg" alt="">
+              <p class="font-inter">Mark as read (<span id="mark-count">0</span>)</p>
+            </div>
+          </div>
+
+          <!-- marked lists container -->
+          <div id="marked-lists" class="space-y-4 mt-6">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forum Section -->
+    <section
+      class="mt-16 md:mt-24 bg-[#12132D] p-6 py-12 md:p-12 lg:p-20 flex flex-col-reverse lg:flex-row justify-between items-center gap-6 md:gap-12 rounded-2xl md:rounded-3xl">
+      <div>
+        <h2 class="header-2 text-white mb-4">Join Our Forum</h2>
+        <p class="text-[#ffffffcc] text-base md:text-lg">Share your favorite opinion and win and wp forum coffee mug!
+          Yes, you can run unit
+          tests and view the results directly within the app. </p>
+        <button class="btn mt-8 hover:text-white">Register Now</button>
+
+      </div>
+      <img src="./images-&-icons/joinforum.png" alt="" class="w-4/5 md:w-3/5 lg:w-2/5">
+
+    </section>
+
+    <!-- Latest Post Section -->
+    <section class="mt-16 md:mt-24">
+      <header class="sec-header">
+        <h2 class="header-2">Latest Posts</h2>
+        <p class="font-inter">Discover fresh content, updated regularly, featuring diverse topics, insights, and
+          engaging perspectives for
+          your browsing pleasure</p>
+      </header>
+
+      <!-- Loading Spinner -->
+      <div id="latest-loader" class="flex justify-center items-center min-h-[25vh] text-2xl md:text-3xl font-extrabold">
+        Loading...
+      </div>
+
+      <!-- Section contents 
+---------------------------->
+      <!-- cards  -->
+      <div id="latest-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer
+  ================= -->
+  <footer class="mt-16 md:mt-24 bg-gradient-to-r from-[#12132d0d] to-[#12132d12] py-12 md:py-24">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="header-3">ReTro</h3>
+      <p class="w-4/5 md:w-3/5 mx-auto mt-4 text-base md:text-lg">A concise conclusion, featuring copyright, contact
+        info, and social links,
+        enhances user experience and fosters connectivity.</p>
+      <!-- icons -->
+      <div class="flex gap-6 justify-center border-b-2 pb-8 md:pb-12 mb-8 md:mb-12 mt-8">
+        <i class="fa-brands fa-twitter text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+        <i class="fa-brands fa-facebook-f text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+        <i class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+        <i class="fa-brands fa-github text-2xl cursor-pointer hover:text-[#797DFC]"></i>
+      </div>
+
+      <span class="font-light text-base md:text-lg">
+        2017, All Rights Reserved.
+      </span>
+    </div>
+  </footer>
+
+  <script src="./JavaScript/script.js"></script>
+  <script src="./JavaScript/sidebar.js"></script>
+</body>
+
+</html>
